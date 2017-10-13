@@ -11,4 +11,5 @@
     <bean id="userDao" class="dao.UserDao">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
+
 </beans>
