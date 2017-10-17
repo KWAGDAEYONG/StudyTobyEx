@@ -1,5 +1,6 @@
 package dao;
 
+import domain.Level;
 import domain.User;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,12 +8,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.datasource.SingleConnectionDataSource;
-import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -21,10 +19,9 @@ import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations ="/test-applicationContext.xml" )
-public class UserDaoTest {
+public class UserDaoJdbcTest {
 
     @Autowired
-    private ApplicationContext context;
     private UserDao userDao;
     private User user1;
     private User user2;
@@ -32,12 +29,9 @@ public class UserDaoTest {
 
     @Before
     public void setUp(){
-        userDao = new UserDao();
-        DataSource dataSource = new SingleConnectionDataSource("jdbc:mysql://localhost:3306/toby","root","rhkr1636",true);
-        userDao.setDataSource(dataSource);
-        this.user1 = new User("tester1","곽대용","123");
-        this.user2 = new User("tester2","하해리","123");
-        this.user3 = new User("tester3","한영준","123");
+        this.user1 = new User("tester1","곽대용","123", Level.BASIC,1,0);
+        this.user2 = new User("tester2","하해리","123", Level.SILVER,55,10);
+        this.user3 = new User("tester3","한영준","123",Level.GOLD,100,40);
     }
 
     @Test
@@ -51,12 +45,10 @@ public class UserDaoTest {
         assertThat(userDao.getCount(),is(2));
 
         User target1 = userDao.get(user1.getId());
-        assertThat(target1.getName(), is(user1.getName()));
-        assertThat(target1.getPassword(), is(user1.getPassword()));
+        checkSameUser(target1, user1);
 
         User target2 = userDao.get(user2.getId());
-        assertThat(target2.getName(), is(user2.getName()));
-        assertThat(target2.getPassword(), is(user2.getPassword()));
+        checkSameUser(target2,user2);
     }
 
     @Test
@@ -112,10 +104,34 @@ public class UserDaoTest {
 
     }
 
+    @Test
+    public void update(){
+        userDao.deleteAll();
+
+        userDao.add(user1);
+        userDao.add(user2);
+
+        user1.setName("오민규");
+        user1.setPassword("1234");
+        user1.setLevel(Level.GOLD);
+        user1.setLogin(1000);
+        user1.setRecommend(999);
+
+        userDao.update(user1);
+
+        User updateUser = userDao.get(user1.getId());
+        User noUpdateUser = userDao.get(user2.getId());
+        checkSameUser(user1, updateUser);
+        checkSameUser(user2,noUpdateUser);
+    }
+
+
     private void checkSameUser(User user1, User user2){
         assertThat(user1.getId(), is(user2.getId()));
         assertThat(user1.getName(), is(user2.getName()));
         assertThat(user1.getPassword(), is(user2.getPassword()));
-
+        assertThat(user1.getLevel(), is(user2.getLevel()));
+        assertThat(user1.getLogin(), is(user2.getLogin()));
+        assertThat(user1.getRecommend(), is(user2.getRecommend()));
     }
 }
