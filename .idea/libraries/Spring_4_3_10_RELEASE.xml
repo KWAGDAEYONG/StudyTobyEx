@@ -23,6 +23,9 @@
       <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.44-bin.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/hamcrest-core-1.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/" />
+      <root url="jar://D:/toby_ex/Vol1-31/Libs/lib/com.springsource.javax.mail-1.4.0.jar!/" />
+      <root url="jar://D:/toby_ex/Vol1-31/Libs/lib/com.springsource.javax.activation-1.1.0.jar!/" />
+      <root url="jar://D:/toby_ex/Vol1-31/Libs/lib/org.springframework.context.support-3.1.2.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
