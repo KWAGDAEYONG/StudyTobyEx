@@ -4,8 +4,8 @@ import dao.UserDao;
 import domain.Level;
 import domain.User;
 
-import static service.UserService.MIN_LOGCOUNT_FOR_SILVER;
-import static service.UserService.MIN_RECCOMEND_FOR_GOLD;
+import static service.UserServiceImpl.MIN_LOGCOUNT_FOR_SILVER;
+import static service.UserServiceImpl.MIN_RECCOMEND_FOR_GOLD;
 
 public class UserLevelUpgradePolicyImpl implements UserLevelUpgradePolicy {
 
