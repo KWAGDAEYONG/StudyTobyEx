@@ -7,6 +7,7 @@ import domain.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 import org.springframework.mail.MailException;
@@ -26,6 +27,7 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
+import static org.mockito.Mockito.*;
 import static service.UserServiceImpl.MIN_LOGCOUNT_FOR_SILVER;
 import static service.UserServiceImpl.MIN_RECCOMEND_FOR_GOLD;
 
@@ -152,6 +154,29 @@ public class UserServiceTest {
         }else{
             assertThat(userUpdate.getLevel(),is(user.getLevel()));
         }
+    }
+
+    @Test
+    public void mockUpgradeLevels() throws Exception{
+        UserServiceImpl userServiceImpl = new UserServiceImpl();
+        UserLevelUpgradePolicy userLevelUpgradePolicy = new UserLevelUpgradePolicyImpl();
+
+        UserDao mockUserDao = mock(UserDao.class);
+        when(mockUserDao.getAll()).thenReturn(this.users);
+        userServiceImpl.setUserDao(mockUserDao);
+
+        MailSender mockMailSender = mock(MailSender.class);
+        userServiceImpl.setMailSender(mockMailSender);
+        userServiceImpl.setPolicy(userLevelUpgradePolicy);
+
+        userServiceImpl.upgradeLevels();
+
+        verify(mockUserDao, times(2)).update(any(User.class));
+        verify(mockUserDao, times(2)).update(any(User.class));
+        verify(mockUserDao).update(users.get(1));
+        assertThat(users.get(1).getLevel(), is(Level.SILVER));
+        verify(mockUserDao).update(users.get(3));
+        assertThat(users.get(3).getLevel(),is(Level.GOLD));
     }
 
     static class TestUserService extends UserServiceImpl{

@@ -26,8 +26,11 @@
       <root url="jar://D:/toby_ex/Vol1-31/Libs/lib/com.springsource.javax.mail-1.4.0.jar!/" />
       <root url="jar://D:/toby_ex/Vol1-31/Libs/lib/com.springsource.javax.activation-1.1.0.jar!/" />
       <root url="jar://D:/toby_ex/Vol1-31/Libs/lib/org.springframework.context.support-3.1.2.RELEASE.jar!/" />
+      <root url="jar://D:/toby_ex/Vol1-31/Libs/lib/mockito-all-1.8.4.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://D:/toby_ex/Vol1-31/Libs/lib/mockito-all-1.8.4.jar!/" />
+    </SOURCES>
   </library>
 </component>
