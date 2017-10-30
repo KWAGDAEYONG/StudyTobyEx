@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfc1085d-703a-407d-8adb-30ad9e532356" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/learningtest/Hello.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/learningtest/HelloTarget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/learningtest/HelloTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/learningtest/HelloUppercase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/learningtest/UppercaseHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/service/TransactionHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/service/TxProxyFactoryBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" afterPath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" afterPath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" />
@@ -49,8 +42,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/domain/Level.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/domain/Level.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/domain/User.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/domain/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/exception/DuplicateUserIdException.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/exception/DuplicateUserIdException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/Hello.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/Hello.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTarget.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTarget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloUppercase.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloUppercase.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/JUnitTest.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/JUnitTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/UppercaseHandler.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/UppercaseHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/DummyMailSender.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/DummyMailSender.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/TransactionHandler.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/TransactionHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/TxProxyFactoryBean.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/TxProxyFactoryBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserLevelUpgradePolicy.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserLevelUpgradePolicy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserLevelUpgradePolicyImpl$1.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserLevelUpgradePolicyImpl$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserLevelUpgradePolicyImpl.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserLevelUpgradePolicyImpl.class" />
@@ -90,8 +90,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domain/User.java" afterPath="$PROJECT_DIR$/src/domain/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exception/DuplicateUserIdException.java" afterPath="$PROJECT_DIR$/src/exception/DuplicateUserIdException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/junit.xml" afterPath="$PROJECT_DIR$/src/junit.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learningtest/Hello.java" afterPath="$PROJECT_DIR$/src/learningtest/Hello.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learningtest/HelloTarget.java" afterPath="$PROJECT_DIR$/src/learningtest/HelloTarget.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learningtest/HelloTest.java" afterPath="$PROJECT_DIR$/src/learningtest/HelloTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learningtest/HelloUppercase.java" afterPath="$PROJECT_DIR$/src/learningtest/HelloUppercase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learningtest/JUnitTest.java" afterPath="$PROJECT_DIR$/src/learningtest/JUnitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learningtest/UppercaseHandler.java" afterPath="$PROJECT_DIR$/src/learningtest/UppercaseHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/DummyMailSender.java" afterPath="$PROJECT_DIR$/src/service/DummyMailSender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/TransactionHandler.java" afterPath="$PROJECT_DIR$/src/service/TransactionHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/TxProxyFactoryBean.java" afterPath="$PROJECT_DIR$/src/service/TxProxyFactoryBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/UserLevelUpgradePolicy.java" afterPath="$PROJECT_DIR$/src/service/UserLevelUpgradePolicy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/UserLevelUpgradePolicyImpl.java" afterPath="$PROJECT_DIR$/src/service/UserLevelUpgradePolicyImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/UserService.java" afterPath="$PROJECT_DIR$/src/service/UserService.java" />
@@ -115,8 +122,8 @@
       <file leaf-file-name="UserServiceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/UserServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="128" column="43" lean-forward="false" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -673,7 +680,7 @@
       <workItem from="1508837527251" duration="599000" />
       <workItem from="1508839924555" duration="608000" />
       <workItem from="1508991942565" duration="6311000" />
-      <workItem from="1509328654702" duration="7759000" />
+      <workItem from="1509328654702" duration="7762000" />
     </task>
     <servers />
   </component>
@@ -710,7 +717,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89703000" />
+    <option name="totallyTimeSpent" value="89706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -724,7 +731,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30141458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30141458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1248,8 +1255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/UserServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="128" column="43" lean-forward="false" selection-start-line="128" selection-start-column="43" selection-end-line="128" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
