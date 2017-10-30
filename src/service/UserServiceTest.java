@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;
@@ -19,6 +20,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
+import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -54,6 +56,9 @@ public class UserServiceTest {
 
     @Autowired
     UserServiceImpl userServiceImpl;
+
+    @Autowired
+    ApplicationContext applicationContext;
 
     List<User> users;
 
@@ -117,6 +122,7 @@ public class UserServiceTest {
     }
 
     @Test
+    @DirtiesContext
     public void upgradeAllOrNothing()throws Exception{
         TestUserService testUserService = new TestUserService(users.get(3).getId());
 
@@ -124,9 +130,9 @@ public class UserServiceTest {
         testUserService.setPolicy(this.userLevelUpgradePolicy);
         testUserService.setMailSender(this.mailSender);
 
-        UserServiceTx txUserService = new UserServiceTx();
-        txUserService.setTransactionManager(transactionManager);
-        txUserService.setUserService(testUserService);
+        TxProxyFactoryBean txProxyFactoryBean = applicationContext.getBean("&userService", TxProxyFactoryBean.class);
+        txProxyFactoryBean.setTarget(testUserService);
+        UserService txUserService = (UserService) txProxyFactoryBean.getObject();
 
         userDao.deleteAll();
         for(User user : users){

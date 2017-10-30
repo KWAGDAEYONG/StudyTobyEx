@@ -14,9 +14,11 @@
         <property name="password" value="rhkr1636" />
     </bean>
 
-    <bean id="userService" class="service.UserServiceTx">
-       <property name="transactionManager" ref="transactionManager"/>
-        <property name="userService" ref="userServiceImpl"/>
+    <bean id="userService" class="service.TxProxyFactoryBean">
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="pattern" value="upgradeLevels" />
+        <property name="target" ref="userServiceImpl"/>
+        <property name="serviceInterface" value="service.UserService"/>
     </bean>
 
     <bean id="userServiceImpl" class="service.UserServiceImpl">
