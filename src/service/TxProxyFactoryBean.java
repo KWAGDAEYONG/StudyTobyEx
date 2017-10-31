@@ -1,3 +1,4 @@
+/*
 package service;
 
 import org.springframework.beans.factory.FactoryBean;
@@ -45,3 +46,4 @@ public class TxProxyFactoryBean implements FactoryBean<Object> {
         return false;
     }
 }
+*/
