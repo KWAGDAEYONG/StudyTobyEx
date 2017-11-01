@@ -3,6 +3,8 @@ package learningtest;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.junit.Test;
+import org.springframework.aop.ClassFilter;
+import org.springframework.aop.Pointcut;
 import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.NameMatchMethodPointcut;
@@ -75,6 +77,45 @@ public class HelloTest {
         assertThat(proxiedHello.sayThankYou("dy"),is("Thank You dy"));
     }
 
+    @Test
+    public void classNamePointcutAdvisor(){
+        NameMatchMethodPointcut classMethodPointcut = new NameMatchMethodPointcut(){
+            @Override
+            public ClassFilter getClassFilter() {
+                return new ClassFilter() {
+                    @Override
+                    public boolean matches(Class<?> clazz) {
+                        return clazz.getSimpleName().startsWith("HelloT");
+                    }
+                };
+            }
+        };
+
+        classMethodPointcut.setMappedName("sayH*");
+
+        checkAdviced(new HelloTarget(),classMethodPointcut,true);
+        checkAdviced(new HelloWorld(), classMethodPointcut, false);
+        checkAdviced(new HelloToby(), classMethodPointcut, true);
+
+    }
+
+    private void checkAdviced(Object target, Pointcut pointcut, boolean adviced){
+        ProxyFactoryBean pfBean = new ProxyFactoryBean();
+        pfBean.setTarget(target);
+        pfBean.addAdvisor(new DefaultPointcutAdvisor(pointcut, new UppercaseAdvice()));
+        Hello proxiedHello = (Hello) pfBean.getObject();
+
+        if(adviced){
+            assertThat(proxiedHello.sayHello("dy"),is("HELLO DY"));
+            assertThat(proxiedHello.sayHi("dy"),is("HI DY"));
+            assertThat(proxiedHello.sayThankYou("dy"),is("Thank You dy"));
+        }else{
+            assertThat(proxiedHello.sayHello("dy"),is("Hello dy"));
+            assertThat(proxiedHello.sayHi("dy"),is("Hi dy"));
+            assertThat(proxiedHello.sayThankYou("dy"),is("Thank You dy"));
+        }
+    }
+
     static interface Hello{
         String sayHello(String name);
         String sayHi(String name);
@@ -82,6 +123,40 @@ public class HelloTest {
     }
 
     static class HelloTarget implements Hello{
+        @Override
+        public String sayHello(String name) {
+            return "Hello "+name;
+        }
+
+        @Override
+        public String sayHi(String name) {
+            return "Hi "+name;
+        }
+
+        @Override
+        public String sayThankYou(String name) {
+            return "Thank You "+name;
+        }
+    }
+
+    static class HelloWorld implements Hello{
+        @Override
+        public String sayHello(String name) {
+            return "Hello "+name;
+        }
+
+        @Override
+        public String sayHi(String name) {
+            return "Hi "+name;
+        }
+
+        @Override
+        public String sayThankYou(String name) {
+            return "Thank You "+name;
+        }
+    }
+
+    static class HelloToby implements Hello{
         @Override
         public String sayHello(String name) {
             return "Hello "+name;
