@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/aop
+                            http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                            http://www.springframework.org/schema/tx
+                            http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
     <bean id="userDao" class="dao.UserDaoJdbc">
         <property name="dataSource" ref="dataSource" />
@@ -31,23 +38,39 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <bean id="transactionAdvice" class="service.TransactionAdvice">
-        <property name="transactionManager" ref="transactionManager"/>
-    </bean>
+    <tx:advice id="transactionAdvice">
+        <tx:attributes>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="*" />
+        </tx:attributes>
+    </tx:advice>
 
-    <bean id="transactionAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+    <!--<bean id="transactionAdvice" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="transactionAttributes">
+            <props>
+                <prop key="get*">PROPAGATION_REQUIRED,readOnly,timeout_30</prop>
+                <prop key="upgrade*">PROPAGATION_REQUIRES_NEW,ISOLATION_SERIALIZABLE</prop>
+                <prop key="*">PROPAGATION_REQUIRED</prop>
+            </props>
+        </property>
+    </bean>-->
+
+    <!--<bean id="transactionAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
         <property name="advice" ref="transactionAdvice"/>
         <property name="pointcut" ref="transactionPointcut"/>
-    </bean>
+    </bean>-->
 
     <bean id="mailSender" class="service.DummyMailSender"/>
 
-    <bean id="transactionPointcut" class="org.springframework.aop.aspectj.AspectJExpressionPointcut">
+    <!--<bean id="transactionPointcut" class="org.springframework.aop.aspectj.AspectJExpressionPointcut">
         <property name="expression" value="execution(* *..*ServiceImpl.upgrade*(..))" />
 
-    </bean>
+    </bean>-->
 
     <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
-
+    <aop:config>
+        <aop:advisor advice-ref="transactionAdvice" pointcut="bean(*Service)"/>
+    </aop:config>
 
 </beans>

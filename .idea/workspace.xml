@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfc1085d-703a-407d-8adb-30ad9e532356" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/service/NameMatchClassMethodPointcut.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$TestUserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTx.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" afterPath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" afterPath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" />
@@ -47,8 +44,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/exception/DuplicateUserIdException.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/exception/DuplicateUserIdException.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/Hello.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/Hello.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTarget.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTarget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$1$1.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$1.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$Hello.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$Hello.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$HelloTarget.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$HelloTarget.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$HelloToby.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$HelloToby.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$HelloWorld.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$HelloWorld.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$UppercaseAdvice.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest$UppercaseAdvice.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloUppercase.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/learningtest/HelloUppercase.class" />
@@ -65,6 +66,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$MockMailSender.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$MockMailSender.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$MockUserDao.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$MockUserDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$TestUserServiceException.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$TestUserServiceException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$TestUserServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest$TestUserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserServiceTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tobyRemind/service/UserTest.class" afterPath="$PROJECT_DIR$/out/production/tobyRemind/service/UserTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_10_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Spring_4_3_10_RELEASE.xml" />
@@ -100,6 +102,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learningtest/JUnitTest.java" afterPath="$PROJECT_DIR$/src/learningtest/JUnitTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/learningtest/UppercaseHandler.java" afterPath="$PROJECT_DIR$/src/learningtest/UppercaseHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/DummyMailSender.java" afterPath="$PROJECT_DIR$/src/service/DummyMailSender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/NameMatchClassMethodPointcut.java" afterPath="$PROJECT_DIR$/src/service/NameMatchClassMethodPointcut.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/TransactionAdvice.java" afterPath="$PROJECT_DIR$/src/service/TransactionAdvice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/TransactionHandler.java" afterPath="$PROJECT_DIR$/src/service/TransactionHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/TxProxyFactoryBean.java" afterPath="$PROJECT_DIR$/src/service/TxProxyFactoryBean.java" />
@@ -123,14 +126,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserServiceTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/UserServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="124" column="9" lean-forward="true" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
+              <caret line="124" column="9" lean-forward="false" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6502#6510#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/service/UserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,22 +162,9 @@
       <file leaf-file-name="test-applicationContext.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test-applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="307">
+              <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NameMatchClassMethodPointcut.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/NameMatchClassMethodPointcut.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <marker date="1509523038007" expanded="false" signature="532:546" ph=" { " />
-                <marker date="1509523038007" expanded="false" signature="575:585" ph=" }" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -178,30 +179,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoJdbc.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/UserDaoJdbc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-              <folding>
-                <marker date="1508325315591" expanded="true" signature="1458:1548" ph="insert into users... " />
-                <marker date="1508325315591" expanded="true" signature="1767:1797" ph="select * fro... users" />
-                <marker date="1508325315591" expanded="true" signature="1906:1923" ph="delete from " />
-                <marker date="1508325315591" expanded="true" signature="2213:2239" ph="select count... users" />
-                <marker date="1508325315591" expanded="true" signature="2565:2584" ph="select * fro... users" />
-                <marker date="1508325315591" expanded="true" signature="2565:2596" ph="select * fro... users" />
-                <marker date="1508325315591" expanded="true" signature="2693:2776" ph="update users... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="285">
+              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,8 +194,8 @@
       <file leaf-file-name="TransactionAdvice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/TransactionAdvice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="19">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -222,6 +207,25 @@
             <state relative-caret-position="209">
               <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/service/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="516">
+              <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+              <folding>
+                <element signature="e#1525#1526#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1593#1594#0" expanded="true" />
+                <element signature="e#1631#1632#0" expanded="true" />
+                <element signature="e#1664#1665#0" expanded="true" />
+                <element signature="e#1703#1704#0" expanded="true" />
+                <element signature="e#1739#1740#0" expanded="true" />
+                <element signature="e#1775#1776#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -291,8 +295,6 @@
         <option value="$PROJECT_DIR$/src/domain/User.java" />
         <option value="$PROJECT_DIR$/src/dao/UserDaoJdbcTest.java" />
         <option value="$PROJECT_DIR$/src/service/DummyMailSender.java" />
-        <option value="$PROJECT_DIR$/src/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/service/UserLevelUpgradePolicyImpl.java" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/learningtest/Hello.java" />
@@ -300,7 +302,6 @@
         <option value="$PROJECT_DIR$/src/learningtest/HelloTeest.java" />
         <option value="$PROJECT_DIR$/src/learningtest/HelloUppercase.java" />
         <option value="$PROJECT_DIR$/src/learningtest/UppercaseHandler.java" />
-        <option value="$PROJECT_DIR$/src/service/TransactionAdvice.java" />
         <option value="$PROJECT_DIR$/src/service/TransactionHandler.java" />
         <option value="$PROJECT_DIR$/src/service/TxProxyFactoryBean.java" />
         <option value="$PROJECT_DIR$/src/service/UserServiceTx.java" />
@@ -308,7 +309,10 @@
         <option value="$PROJECT_DIR$/lib/spring-beans-4.3.10.RELEASE.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.class" />
         <option value="$PROJECT_DIR$/src/service/UserServiceTest.java" />
         <option value="$PROJECT_DIR$/src/service/NameMatchClassMethodPointcut.java" />
+        <option value="$PROJECT_DIR$/src/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test-applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/service/TransactionAdvice.java" />
       </list>
     </option>
   </component>
@@ -340,6 +344,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -400,17 +405,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/toby_ex/Vol1-31/Libs/lib/com.springsource.org.aspectj.tools-1.6.6.RELEASE.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -679,19 +683,11 @@
       <workItem from="1508991942565" duration="6311000" />
       <workItem from="1509328654702" duration="27423000" />
       <workItem from="1509510266648" duration="7520000" />
+      <workItem from="1509601475265" duration="5799000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HelloTest_classNamePointcutAdvisor - 2017.11.01 at 14h 22m 01s.xml">
-      <configuration name="HelloTest.classNamePointcutAdvisor" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_bean - 2017.11.01 at 16h 42m 00s.xml">
-      <configuration name="UserServiceTest.bean" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest_upgradeAllOrNothing - 2017.10.31 at 22h 19m 26s.xml">
-      <configuration name="UserServiceTest.upgradeAllOrNothing" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserServiceTest_upgradeAllOrNothing - 2017.11.01 at 16h 17m 34s.xml">
       <configuration name="UserServiceTest.upgradeAllOrNothing" configurationId="JUnit" />
     </history-entry>
@@ -713,9 +709,18 @@
     <history-entry file="UserServiceTest_upgradeAllOrNothing - 2017.11.01 at 17h 02m 20s.xml">
       <configuration name="UserServiceTest.upgradeAllOrNothing" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserServiceTest_upgradeAllOrNothing - 2017.11.02 at 14h 56m 48s.xml">
+      <configuration name="UserServiceTest.upgradeAllOrNothing" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest_upgradeAllOrNothing - 2017.11.02 at 16h 21m 53s.xml">
+      <configuration name="UserServiceTest.upgradeAllOrNothing" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest_upgradeAllOrNothing - 2017.11.02 at 16h 22m 55s.xml">
+      <configuration name="UserServiceTest.upgradeAllOrNothing" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116887000" />
+    <option name="totallyTimeSpent" value="122686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -729,20 +734,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30141458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30141458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26652452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26918977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1090,14 +1095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/service/TxProxyFactoryBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1133,7 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="530" column="0" lean-forward="false" selection-start-line="530" selection-start-column="0" selection-end-line="530" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1141,35 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/UserServiceTx.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <marker date="1509456235213" expanded="false" signature="432:443" ph=" { " />
-            <marker date="1509456235213" expanded="false" signature="474:480" ph=" }" />
-            <marker date="1509456235213" expanded="false" signature="660:670" ph=" { " />
-            <marker date="1509456235213" expanded="false" signature="692:698" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1187,22 +1154,6 @@
             <marker date="1508325315591" expanded="true" signature="2565:2596" ph="select * fro... users" />
             <marker date="1508325315591" expanded="true" signature="2693:2776" ph="update users... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/UserLevelUpgradePolicy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/UserLevelUpgradePolicyImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,18 +1176,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/TransactionAdvice.java">
+    <entry file="file://$PROJECT_DIR$/src/service/UserServiceTx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="418">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <marker date="1509456235213" expanded="false" signature="432:443" ph=" { " />
+            <marker date="1509456235213" expanded="false" signature="474:480" ph=" }" />
+            <marker date="1509456235213" expanded="false" signature="660:670" ph=" { " />
+            <marker date="1509456235213" expanded="false" signature="692:698" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test-applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="307">
+          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/TransactionAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/UserLevelUpgradePolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/UserLevelUpgradePolicyImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1244,7 +1232,35 @@
     <entry file="file://$PROJECT_DIR$/src/service/UserServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="124" column="9" lean-forward="true" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
+          <caret line="124" column="9" lean-forward="false" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6502#6510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+          <folding>
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1631#1632#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1775#1776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

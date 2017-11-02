@@ -57,6 +57,22 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    public void deleteAll(){
+        userDao.deleteAll();
+    }
+
+    public User get(String id){
+        return userDao.get(id);
+    }
+
+    public List<User> getAll(){
+        return userDao.getAll();
+    }
+
+    public void update(User user){
+        userDao.update(user);
+    }
+
     //테스트를 위해 임시로 추상화 DI 중복 코딩(테스트에서 오버라이드 하기 위해.. 책에서 추상화 하래서 했더만 테스트를 이렇게..!)
     public void upgradeLevel(User user) {
         user.upgradeLevel();
