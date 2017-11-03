@@ -1,13 +1,14 @@
 package dao;
 
+import configure.AppContext;
 import domain.Level;
 import domain.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -18,7 +19,8 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations ="/test-applicationContext.xml" )
+@ActiveProfiles("test")
+@ContextConfiguration(classes = AppContext.class)
 public class UserDaoJdbcTest {
 
     @Autowired

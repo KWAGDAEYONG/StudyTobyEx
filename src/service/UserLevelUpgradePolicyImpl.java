@@ -3,17 +3,17 @@ package service;
 import dao.UserDao;
 import domain.Level;
 import domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import static service.UserServiceImpl.MIN_LOGCOUNT_FOR_SILVER;
 import static service.UserServiceImpl.MIN_RECCOMEND_FOR_GOLD;
 
+@Component("userLevelUpgradePolicy")
 public class UserLevelUpgradePolicyImpl implements UserLevelUpgradePolicy {
 
+    @Autowired
     UserDao userDao;
-
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
-    }
 
     @Override
     public boolean canUpgradeLevel(User user) {

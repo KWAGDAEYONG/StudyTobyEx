@@ -1,27 +1,24 @@
 package service;
 
+import configure.AppContext;
 import dao.UserDao;
-import dao.UserDaoJdbc;
 import domain.Level;
 import domain.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
-import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,7 +32,8 @@ import static service.UserServiceImpl.MIN_LOGCOUNT_FOR_SILVER;
 import static service.UserServiceImpl.MIN_RECCOMEND_FOR_GOLD;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "/test-applicationContext.xml")
+@ActiveProfiles("test")
+@ContextConfiguration(classes = AppContext.class)
 public class UserServiceTest {
     @Autowired
     UserService userService;
@@ -86,6 +84,8 @@ public class UserServiceTest {
         MockUserDao mockUserDao = new MockUserDao(this.users);
         MockMailSender mockMailSender = new MockMailSender();
 
+
+        userServiceImpl.setPolicy(userLevelUpgradePolicy);
         userServiceImpl.setUserDao(mockUserDao);
         userServiceImpl.setMailSender(mockMailSender);
 
@@ -178,7 +178,7 @@ public class UserServiceTest {
 
 
 
-    static class TestUserServiceImpl extends UserServiceImpl{
+    public  static class TestUserServiceImpl extends UserServiceImpl{
         private String id = "tester4";
 
         @Override
@@ -212,6 +212,7 @@ public class UserServiceTest {
 
         }
     }
+
 
     static class MockUserDao implements UserDao{
         //업그레이드 후보
