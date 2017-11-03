@@ -1,16 +1,14 @@
 package configure;
 
+import com.mysql.jdbc.Driver;
 import dao.UserDao;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 
 import javax.sql.DataSource;
-import com.mysql.jdbc.Driver;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -34,21 +32,26 @@ public class AppContext {
     @Autowired
     UserLevelUpgradePolicy userLevelUpgradePolicy;
 
-
-    @Value("${db.driverClass")Class<? extends Driver> driverClass;
-    @Value("${db.url") String url;
-    @Value("${db.username") String username;
-    @Value("${db.password") String password;
+    @Autowired
+    Environment env;
 
     @Bean
     public DataSource dataSource(){
         SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
 
+       /* try{
+            dataSource.setDriverClass((Class<? extends java.sql.Driver>)Class.forName(env.getProperty("db.driverClass")));
 
-        dataSource.setDriverClass(this.driverClass);
-        dataSource.setUrl(this.url);
-        dataSource.setUsername(this.username);
-        dataSource.setPassword(this.password);
+        }catch (ClassNotFoundException e){
+            throw new RuntimeException(e);
+        }
+        dataSource.setUrl(env.getProperty("db.url"));
+        dataSource.setUsername(env.getProperty("db.username"));
+        dataSource.setPassword(env.getProperty("db.password"));*/
+        dataSource.setDriverClass(Driver.class);
+        dataSource.setUrl("jdbc:mysql://localhost:3306/toby");
+        dataSource.setUsername("root");
+        dataSource.setPassword("rhkr1636");
 
         return dataSource;
     }
@@ -58,11 +61,6 @@ public class AppContext {
         DataSourceTransactionManager tm = new DataSourceTransactionManager();
         tm.setDataSource(dataSource());
         return tm;
-    }
-
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer placeholderConfigurer(){
-        return new PropertySourcesPlaceholderConfigurer();
     }
 
     @Configuration
